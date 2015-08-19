@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kendo UI Todo List</title>
+    <link href="../client/vendors/kendo-ui/styles/kendo.common.min.css" rel="Stylesheet" type="text/css" />
+    <link href="../client/vendors/kendo-ui/styles/kendo.default.min.css" rel="Stylesheet" type="text/css" />
+    <link href="../client/vendors/kendo-ui/styles/kendo.examples.min.css" rel="Stylesheet" type="text/css" />
+    <link href="../client/test/screen.css" rel="Stylesheet" type="text/css" />
+    <link href="../client/test/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <script src="../client/test/modernizr.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2012.2.913/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div id="content">
+        <ul id="panelbar">
+            <li>Network Activity
+                <div class="log">
+                    <ul id="log">
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    <header>
+            <button id="single-update-mode" class='k-button' data-event="singleUpdateMode">Single Update Mode</button>
+            <button id="batch-update-mode" class='k-button' data-event="batchUpdateMode">Batch Update Mode</button>
+            <img src="../client/test/kendo-dude.png" />
+        </header>
+    
+<div class="description">
+    In Single Update mode, all actions are sent to the server as individual requests as soon as they are initiated in the UI.  The UI reflects the changes made on the server.
+</div>
+<br />
+<div>
+    <div id="title">
+        <h2>Kendo UI Todo List - Single Update Mode</h2>
+        <button id="saveDeletes" class="k-button" data-event="saveAll">Save Changes</button>
+    </div>
+    <hr />
+        <input type="text" id="new-item" class="title" />
+        <button id="addItem" class="k-button add-button title" data-event="addItem">Add</button>
+        <ul id="items"></ul>
+    </div>
+
+
+<script>
+
+    $(function () {
+
+        // create a function for getting the root path 
+        root = function (url) {
+            //var url = ""
+			var path = '/'
+            if (path != '/') path = path + '/'
+            return path + url;
+        }
+
+        app.root = root;
+        app.mode = "single";
+        app.init();
+
+      //  if (app.mode === "batch") $("#saveDeletes").css("opacity", "1");
+
+        $("#panelbar").kendoPanelBar({ height: 200 });
+
+    });
+
+</script>
+
+<script src="../client/test/consoleFix.js"></script>
+<script src="../client/test/templateLoader.js"></script>
+<script src="../client/test/app.js"></script>
+<script src="../client/test/singleDS.js"></script>
+<script src="../client/test/events.js"></script>
+
+
+
+
+
+
+    <footer></footer>
+    </div>
+</body>
+</html>
