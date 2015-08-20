@@ -51,8 +51,9 @@ define(['jquery', 'modules/Login/Login', 'core/cookies', 'core/layout', 'modules
   function startApp(){
     layout.createLayout("3W", "#container");
 	menu.createMenu("panelBar", "#megaStore");
-	windowcreate(undefined, template);
-	win = new window();
+	//menu.createMenu("datePicker", "#test");
+	//window.windowcreate(undefined, template);
+	//win = new window();
   }
 
   //checking if allready logged in

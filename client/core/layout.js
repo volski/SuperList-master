@@ -45,7 +45,7 @@ $("#left-pane").kendoSplitter({
 
 				
 	}
-
+$("#test").kendoDatePicker();
 	return {
 		createLayout: createLayout
 	}

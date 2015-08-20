@@ -1,11 +1,11 @@
 define(['kendo', 'text!./templates/WindowCreateList.html'],
-console.log("here"); 
+
 	function(undefined, template){
 	var windowHtml = $(template);
 		$("#windowButton").append(windowHtml);
 		
-		
 		 var wnd = $("#window");
+		console.log("here"); 
           
 
 		  //create a button of plus
